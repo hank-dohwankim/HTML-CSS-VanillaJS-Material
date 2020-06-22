@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Before & After</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #333;
+        color: #fff;
+        margin: 0;
+      }
+
+      header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+      }
+
+      header:before {
+        content: '';
+        background: url('https://source.unsplash.com/random') no-repeat center
+          center/cover;
+        opacity: 0.6;
+
+        /* Use nellow options because it needs position in*/
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+
+      header > h1 {
+        font-size: 4rem;
+        margin: 1rem;
+      }
+
+      .is-required:before {
+        content: '*';
+        color: red;
+        padding-left: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <label class="is-required" for="name">Name</label>
+    <input type="text" /> -->
+    <header>
+      <h1>Hello World</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+        consequuntur numquam aliquid odio asperiores quasi.
+      </p>
+    </header>
+    <section>
+      <h3>Lorem, ipsum dolor.</h3>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam
+        deserunt quae quo beatae modi reprehenderit ullam velit, placeat
+        provident voluptates quasi sunt quia iusto quod id repellendus minus
+        odit similique?
+      </p>
+    </section>
+  </body>
+</html>
